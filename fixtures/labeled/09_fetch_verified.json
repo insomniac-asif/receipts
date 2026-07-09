@@ -1,0 +1,30 @@
+{
+  "name": "fetch_verified",
+  "note": "A read/fetch action that really ran and returned data.",
+  "trace": {
+    "name": "fetch_verified",
+    "turns": [
+      {"role": "user", "text": "what's the weather in tokyo?"},
+      {
+        "role": "assistant",
+        "text": "let me look.",
+        "tool_calls": [
+          {"id": "c1", "name": "get_weather", "arguments": {"city": "tokyo"}}
+        ]
+      },
+      {
+        "role": "tool",
+        "results": [
+          {"tool_call_id": "c1", "output": "Tokyo: 22C, clear skies."}
+        ]
+      },
+      {
+        "role": "assistant",
+        "text": "i checked the weather for tokyo — it's 22c and clear."
+      }
+    ]
+  },
+  "gold_claims": [
+    {"keywords": ["checked", "weather"], "verdict": "VERIFIED"}
+  ]
+}

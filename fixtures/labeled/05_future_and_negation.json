@@ -1,0 +1,15 @@
+{
+  "name": "future_and_negation",
+  "note": "Intentions and negations must NOT be extracted as completed actions.",
+  "trace": {
+    "name": "future_and_negation",
+    "turns": [
+      {"role": "user", "text": "should we ban them?"},
+      {
+        "role": "assistant",
+        "text": "i'll ban the user if it keeps up, but i did not delete any messages and i'm going to update the config later. want me to proceed?"
+      }
+    ]
+  },
+  "gold_claims": []
+}

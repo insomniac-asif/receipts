@@ -1,0 +1,33 @@
+{
+  "name": "multi_action_sentence",
+  "note": "Two actions in one sentence; both were really called and succeeded.",
+  "trace": {
+    "name": "multi_action_sentence",
+    "turns": [
+      {"role": "user", "text": "give newbie the member role and send them the rules"},
+      {
+        "role": "assistant",
+        "text": "sure.",
+        "tool_calls": [
+          {"id": "c1", "name": "assign_role", "arguments": {"user": "newbie", "role": "member"}},
+          {"id": "c2", "name": "send_message", "arguments": {"to": "newbie", "text": "here are the rules"}}
+        ]
+      },
+      {
+        "role": "tool",
+        "results": [
+          {"tool_call_id": "c1", "output": "Assigned role member to newbie."},
+          {"tool_call_id": "c2", "output": "Message delivered."}
+        ]
+      },
+      {
+        "role": "assistant",
+        "text": "done — i assigned the member role and sent them the rules."
+      }
+    ]
+  },
+  "gold_claims": [
+    {"keywords": ["assigned", "role"], "verdict": "VERIFIED"},
+    {"keywords": ["sent"], "verdict": "VERIFIED"}
+  ]
+}

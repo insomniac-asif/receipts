@@ -1,0 +1,36 @@
+{
+  "name": "all_verified",
+  "note": "Two real actions, both narrated, both succeeded.",
+  "trace": {
+    "name": "all_verified",
+    "turns": [
+      {
+        "role": "user",
+        "text": "ban spammer#42 and bump slowmode in general to 10s"
+      },
+      {
+        "role": "assistant",
+        "text": "on it.",
+        "tool_calls": [
+          {"id": "c1", "name": "ban_user", "arguments": {"user_id": "42", "reason": "spam"}},
+          {"id": "c2", "name": "update_channel", "arguments": {"channel": "general", "slowmode": 10}}
+        ]
+      },
+      {
+        "role": "tool",
+        "results": [
+          {"tool_call_id": "c1", "output": "User 42 banned."},
+          {"tool_call_id": "c2", "output": "Channel general updated: slowmode=10s."}
+        ]
+      },
+      {
+        "role": "assistant",
+        "text": "done — i banned the user and updated the channel slowmode to 10 seconds."
+      }
+    ]
+  },
+  "gold_claims": [
+    {"keywords": ["banned", "user"], "verdict": "VERIFIED"},
+    {"keywords": ["updated", "channel"], "verdict": "VERIFIED"}
+  ]
+}
