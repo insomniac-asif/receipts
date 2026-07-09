@@ -8,6 +8,10 @@
 [![python](https://img.shields.io/badge/python-3.9%2B-blue)](pyproject.toml)
 [![deps](https://img.shields.io/badge/dependencies-none-lightgrey)](pyproject.toml)
 
+<p align="center">
+  <img src="assets/demo.svg" alt="receipts flags a silent failure and a phantom action in an agent's tool-call trace" width="720">
+</p>
+
 ---
 
 ## Why this exists

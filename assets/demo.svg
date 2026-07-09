@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 312" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <rect x="0.5" y="0.5" width="759" height="311" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <circle cx="26" cy="27" r="6" fill="#ff5f56"/>
+  <circle cx="46" cy="27" r="6" fill="#ffbd2e"/>
+  <circle cx="66" cy="27" r="6" fill="#27c93f"/>
+  <text x="380" y="32" text-anchor="middle" fill="#8b949e" font-size="13">receipts — did the agent actually do what it said?</text>
+  <line x1="0" y1="50" x2="760" y2="50" stroke="#30363d"/>
+
+  <text x="26" y="86" fill="#7ee787" font-size="15">$</text>
+  <text x="42" y="86" fill="#c9d1d9" font-size="15">receipts check trace.json</text>
+
+  <text x="26" y="126" fill="#3fb950" font-size="15" font-weight="700">VERIFIED</text>
+  <text x="176" y="126" fill="#c9d1d9" font-size="15">banned the user</text>
+  <text x="52" y="146" fill="#6e7681" font-size="13.5">&#8594; ban_user  (call succeeded)</text>
+
+  <text x="26" y="178" fill="#f85149" font-size="15" font-weight="700">SILENT_FAIL</text>
+  <text x="176" y="178" fill="#c9d1d9" font-size="15">updated the config to enable raid mode</text>
+  <text x="52" y="198" fill="#a5555a" font-size="13.5">&#8594; update_config errored: 403 Forbidden</text>
+
+  <text x="26" y="230" fill="#d29922" font-size="15" font-weight="700">PHANTOM</text>
+  <text x="176" y="230" fill="#c9d1d9" font-size="15">posted an announcement to everyone</text>
+  <text x="52" y="250" fill="#9e7b2f" font-size="13.5">no tool call matches this narrated action</text>
+
+  <text x="26" y="292" font-size="15" fill="#c9d1d9">3 claims &#183; <tspan fill="#3fb950" font-weight="700">1 verified</tspan> &#183; <tspan fill="#f85149" font-weight="700">1 silent-fail</tspan> &#183; <tspan fill="#d29922" font-weight="700">1 phantom</tspan>  |  phantom_rate=<tspan fill="#e6edf3" font-weight="700">33%</tspan></text>
+</svg>
